@@ -16,7 +16,7 @@ Quick Example:
 
 
 ```php
-
+<?php
 require_once 'Application/EventManager/EventManager.php';
 require_once 'Application/EventManager/GlobalEventManager.php';
 
@@ -31,5 +31,6 @@ $eventManager->attach('users.add', function(Application_EventManager_Event $even
 
 $eventManager->trigger('users.add', null, array('id' => 100));
 
+?>
 ```
 [![Build Status](https://secure.travis-ci.org/aporat/Application_EventManager.png)](http://travis-ci.org/aporat/Application_EventManager)
