@@ -22,13 +22,14 @@ require_once 'Application/EventManager/GlobalEventManager.php';
 
 $eventManager = Application_EventManager_GlobalEventManager::getEventCollection();
 
+// attach an event to the global event manager
 $eventManager->attach('users.add', function(Application_EventManager_Event $event) {
 	$message = "Adding a user: " . $event->getParam('id');
 	echo $message . PHP_EOL;
 });
 
 
-
+// trigger an event
 $eventManager->trigger('users.add', null, array('id' => 100));
 
 ?>
