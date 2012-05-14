@@ -53,7 +53,7 @@ class Application_EventManager_GlobalEventManager
     /**
      * Get event collection on which this operates
      * 
-     * @return void
+     * @return Application_EventManager_EventCollection
      */
     public static function getEventCollection()
     {
