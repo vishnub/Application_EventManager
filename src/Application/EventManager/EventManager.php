@@ -201,7 +201,7 @@ class Application_EventManager_EventManager implements Application_EventManager_
         }
 
         if ($callback && !is_callable($callback)) {
-            require_once 'Zend/Stdlib/Exception/InvalidCallbackException.php';
+            require_once 'Application/Stdlib/Exception/InvalidCallbackException.php';
             throw new Application_Stdlib_Exception_InvalidCallbackException('Invalid callback provided');
         }
 
@@ -243,7 +243,7 @@ class Application_EventManager_EventManager implements Application_EventManager_
         }
 
         if (!is_callable($callback)) {
-            require_once 'Zend/Stdlib/Exception/InvalidCallbackException.php';
+            require_once 'Application/Stdlib/Exception/InvalidCallbackException.php';
             throw new Application_Stdlib_Exception_InvalidCallbackException('Invalid callback provided');
         }
 

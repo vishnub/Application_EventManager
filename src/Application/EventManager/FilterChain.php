@@ -84,7 +84,7 @@ class Application_EventManager_FilterChain implements Application_EventManager_F
     public function attach($callback, $priority = 1)
     {
         if (empty($callback)) {
-            require_once 'Zend/Stdlib/Exception/InvalidCallbackException.php';
+            require_once 'Application/Stdlib/Exception/InvalidCallbackException.php';
             throw new Application_Stdlib_Exception_InvalidCallbackException('No callback provided');
         }
         $filter = new Application_Stdlib_CallbackHandler($callback, array('priority' => $priority));
